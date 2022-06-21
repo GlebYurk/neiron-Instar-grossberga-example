@@ -1,5 +1,6 @@
 #include "instar.cpp"
 #include <random>
+#define COUNT 5000  // это кол-во точек генерируетьс€. ƒл€ ускорени€ работы программы уменьшите значение  
 std::vector<point> generator1(int count, double x);//√енераци€ чисел дл€ обучени€ (левого нижнего круга)
 std::vector<point> generator2(int count, double x);//√енераци€ чисел дл€ обучени€ (правого нижнего круга)
 std::vector<point> generator3(int count, double x);//√енераци€ чисел дл€ обучени€ (левого верхнего круга)
@@ -16,10 +17,10 @@ int main()
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	} while (p.x <= 1);
 	p.y = p.x;
-	std::vector<point> Point1 = generator1(500000, p.x);
-	std::vector<point> Point2 = generator2(500000, p.x);
-	std::vector<point> Point3 = generator3(500000, p.x);
-	std::vector<point> Point4 = generator4(500000, p.x);
+	std::vector<point> Point1 = generator1(COUNT, p.x);
+	std::vector<point> Point2 = generator2(COUNT, p.x);
+	std::vector<point> Point3 = generator3(COUNT, p.x);
+	std::vector<point> Point4 = generator4(COUNT, p.x);
 	std::cout << "0,X. Enter X. 0,X=Learning rate" << std::endl;
 	std::cin >> eta;
 	std::cin.clear();
