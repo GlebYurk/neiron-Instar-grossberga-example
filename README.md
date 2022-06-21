@@ -10,4 +10,7 @@
 
 Нормализация элементов вектора X производится по формуле
   ![image](https://user-images.githubusercontent.com/107919914/174770042-2f2217cc-e2a1-4d72-a786-21654eac22f5.png)
+  
+  Обучение инстара с учителем производится по правилу Гроссберга ![image](https://user-images.githubusercontent.com/107919914/174770275-3bf0836a-7be4-4a00-9f1b-0820c400bc8a.png)
+
 
