@@ -10,7 +10,7 @@ struct point
 
 class Instar {
 private:
-	double eta;// коэфицент обучения
+	double eta;// Learning Rate
 	std::vector<double> x, y;
 	point w;
 protected:
@@ -29,11 +29,11 @@ public:
 	{
 		double  mdla, mdlb, mdlab, ccos, ugl, cos1;
 		int gr = 0, mn = 0, sc = 0;
-		mdla = sqrt(ax * ax + ay * ay); //формула длины вектора
+		mdla = sqrt(ax * ax + ay * ay); //formula for vector length
 		mdlb = sqrt(bx * bx + by * by);
 		mdlab = mdla * mdlb;
-		ccos = (ax * bx + ay * by) / mdlab; // формула косинус угла между векторами
-		ugl = acos(ccos) * 180 / M_PI;// получим угол по формуле перевода радиан в градусы
+		ccos = (ax * bx + ay * by) / mdlab; // formula for the cosine of the angle between vectors
+		ugl = acos(ccos) * 180 / M_PI; // get the angle using the formula for converting radians to degrees
 		std::cout << ugl << std::endl;
 		return sc;
 	}

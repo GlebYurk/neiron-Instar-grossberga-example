@@ -1,15 +1,15 @@
 #include "instar.cpp"
 #include <random>
-#define COUNT 5000  // это кол-во точек генерируеться. Для ускорения работы программы уменьшите значение  
-std::vector<point> generator1(int count, double x);//Генерация чисел для обучения (левого нижнего круга)
-std::vector<point> generator2(int count, double x);//Генерация чисел для обучения (правого нижнего круга)
-std::vector<point> generator3(int count, double x);//Генерация чисел для обучения (левого верхнего круга)
-std::vector<point> generator4(int count, double x);//Генерация чисел для обучения (правого верхнего круга)
+#define COUNT 5000  // this is the number of points generated. To speed up the program, reduce the value
+std::vector<point> generator1(int count, double x);//Number generation for training (lower left circle)
+std::vector<point> generator2(int count, double x);//Number generation for training (lower right circle)
+std::vector<point> generator3(int count, double x);//Number generation for training (upper left circle)
+std::vector<point> generator4(int count, double x);//Generation of numbers for training (upper right circle)
 int main()
 {
-	point p; // Центр первого круга
-	double eta; // Коэффицент обучения
-	int count; // Количество точек
+	point p; // Center of the first circle
+	double eta; // Learning Rate
+	int count; // Number of points
 	do {
 		std::cout << "x and y first circle centre=>1" << std::endl;
 		std::cin >> p.x;
@@ -47,7 +47,9 @@ int main()
 		instar4.Test(x, y);
 	}
 }
-std::vector<point> generator1(int count, double x)//Генерация чисел для обучения (левого нижнего круга)
+
+
+std::vector<point> generator1(int count, double x)//Number generation for training (lower left circle)
 {
 	double z = x + 1;
 	double d, y1, y2;
@@ -78,7 +80,8 @@ std::vector<point> generator1(int count, double x)//Генерация чисел для обучения
 	}
 	return Point;
 }
-std::vector<point> generator2(int count, double x)//Генерация чисел для обучения (левого верхнего круга)
+
+std::vector<point> generator2(int count, double x)//Number generation for training(upper left circle)
 {
 	double z = x + 1;
 	double d, y1, y2;
@@ -108,7 +111,8 @@ std::vector<point> generator2(int count, double x)//Генерация чисел для обучения
 	}
 	return Point;
 }
-std::vector<point> generator3(int count, double x)//Генерация чисел для обучения (левого верхнего круга)
+
+std::vector<point> generator3(int count, double x)//Generate numbers for training (upper left circle)
 {
 	double z = x + 1;
 	double d, y1, y2;
@@ -139,7 +143,8 @@ std::vector<point> generator3(int count, double x)//Генерация чисел для обучения
 	}
 	return Point;
 }
-std::vector<point> generator4(int count, double x)//Генерация чисел для обучения (правого верхнего круга)
+
+std::vector<point> generator4(int count, double x)//Generate numbers for training (upper right circle)
 {
 	double z = x + 1;
 	double d, y1, y2;
