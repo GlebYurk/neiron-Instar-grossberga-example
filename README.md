@@ -19,7 +19,3 @@
 
 ![image](https://user-images.githubusercontent.com/107919914/174771219-e0b2b660-7123-4889-8ccf-989dc8201e9d.png)
 
-
-На рисунке ниже показана зависимость выходного сигнала от входных тестовых данных, введенных после обучения нейрона. 
-
-![image](https://user-images.githubusercontent.com/107919914/174772134-4a301535-ee69-4b05-bbc9-0b8d56ec098b.png)
